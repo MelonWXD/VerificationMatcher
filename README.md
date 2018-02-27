@@ -8,9 +8,11 @@
 
 大概长这样:![](http://owu391pls.bkt.clouddn.com/yanzhenma.png)
 
-我把上面的图叫做src，下面的图叫做query，要做的就是根据src，找到query中相应的位置
-src:![](http://owu391pls.bkt.clouddn.com/src1.png)
+我把上面的图叫做src，下面的图叫做query，要做的就是根据src，找到query中相应的位置  
 
+src:![](http://owu391pls.bkt.clouddn.com/src1.png)
+  
+  
 query:![](http://owu391pls.bkt.clouddn.com/query1.png)
 
 
@@ -92,7 +94,8 @@ def template_match(src, query):
     cv2.imwrite(resPath + '/result1.png', query)
 ```
 
-结果:![](http://owu391pls.bkt.clouddn.com/result1.png)
+结果:  
+![](http://owu391pls.bkt.clouddn.com/result1.png)
 
 
 
@@ -104,11 +107,13 @@ def template_match(src, query):
 
 大体思路就是分割src，通过谷歌的tesseract转换成文字，再把query中的文字一个个抓出来识别，因为query中字体位置无规律，一整张放进去也无法识别。
 
-src:![](http://owu391pls.bkt.clouddn.com/src2.png)
+src:  
+![](http://owu391pls.bkt.clouddn.com/src2.png)
 
-src的处理就不多BB了，二值化之后固定分割，甚至可以不处理直接分割，然后再识别即可主要看query的处理。
+src的处理就不多说了，二值化之后固定分割，甚至可以不处理直接分割，然后再识别即可主要看query的处理。
 
-query:![](http://owu391pls.bkt.clouddn.com/query2.png)
+query:  
+![](http://owu391pls.bkt.clouddn.com/query2.png)
 
 二值化：
 
@@ -191,7 +196,7 @@ coorList = []
             print('第三个点击位置为(%d,%d)', (sum(coorTuple[:2]) / 2), (sum(coorTuple[2:]) / 2))
 ```
 
-识别出来的word如下：
+切割出来的word如下：
 
 ![](http://owu391pls.bkt.clouddn.com/query_word0.png)
 ![](http://owu391pls.bkt.clouddn.com/query_word1.png)
