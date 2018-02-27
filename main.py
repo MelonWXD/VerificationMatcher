@@ -23,9 +23,10 @@ def dilate_img(src):
     return cv2.dilate(src, kernel, iterations=1)
 
 
-# ocr
+# ocr 字库由于项目问题不方便泄露,见谅
 def img_to_cn(wordImg):
-    return pytesseract.image_to_string(wordImg, lang='my_cn')
+    # return pytesseract.image_to_string(wordImg, lang='my_cn')
+    return pytesseract.image_to_string(wordImg, lang='chi_sim')
 
 
 # rgb三色各表示123文字点击顺序
